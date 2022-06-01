@@ -1,3 +1,6 @@
+import Header from "./components/Header"
+import Feedbackitem from "./components/Feedbackitem"
+
 function App() {
     const title = 'Blog Post'
     const body = 'This is my blog'
@@ -31,18 +34,22 @@ function App() {
     )
 
     return (
-        <div className='container'>
-            <h1>My App</h1>
+        <>
+            <Header />
+            <div className='container'>
+                <h1>My App</h1>
+                <Feedbackitem />
 
-            {/* 
-            <h1>{title}</h1> 
-            <p>{body}</p>
-            {5 + 5}
-            {showComments && commentBlock}
-            */}
-            
-            {/* to comment in jsx within react use curly braces*/ }
-        </div>
+                {/* 
+                    <h1>{title}</h1> 
+                    <p>{body}</p>
+                    {5 + 5}
+                    {showComments && commentBlock}
+                */}
+                
+                {/* to comment in jsx within react use curly braces*/ }
+            </div>
+        </>
     )
 }
 
