@@ -1,5 +1,7 @@
+import { useState } from "react"
 import Header from "./components/Header"
-import Feedbackitem from "./components/Feedbackitem"
+import FeedbackList from "./components/FeedbackList"
+import FeedbackData from "./data/FeedbackData"
 
 function App() {
     const title = 'Blog Post'
@@ -17,6 +19,11 @@ function App() {
     const loading = false
     const showComments = true
 
+    const [feedback, setFeedback] = useState
+    (FeedbackData)
+
+    // double check that all returns happen after any constants
+    // are declared
     if (loading) return <h1>Loading ...</h1>
 
     // ternary marks are ? &&
@@ -33,12 +40,13 @@ function App() {
         </div>
     )
 
+
     return (
         <>
             <Header />
             <div className='container'>
                 <h1>My App</h1>
-                <Feedbackitem />
+                <FeedbackList feedback={feedback}/>
 
                 {/* 
                     <h1>{title}</h1> 
